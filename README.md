@@ -1,4 +1,4 @@
-# End-to-End Data Analytics Portfolio Project: Customer Shopping Behavior Analysis
+# Shopping Trends And Customer Behaviour
 
 Dự án phân tích dữ liệu toàn diện (End-to-End) mô phỏng quy trình làm việc thực tế tại doanh nghiệp [1]. Dự án bao gồm toàn bộ vòng đời phân tích: từ làm sạch dữ liệu bằng **Python**, truy vấn nâng cao bằng **SQL Server**, trực quan hóa tương tác trên **Power BI**, tài liệu hóa báo cáo và chuyển đổi thành slide thuyết trình.
 
