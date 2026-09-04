@@ -26,7 +26,7 @@ Tập dữ liệu thô `Data/Shopping Trends And Customer Behaviour Dataset.csv`
 
 ## 🔄 Quy trình thực hiện
 
-### Bước 1: Python - Làm sạch & Tiền xử lý dữ liệu \
+### Bước 1: Python - Làm sạch & Tiền xử lý dữ liệu 
 Trong bước này, tiến hành xử lý dữ liệu thô trong Jupyter Notebook trước khi nạp vào hệ thống SQL:
 1.  **Kiểm tra tổng quan dữ liệu:** Đọc dữ liệu, kiểm tra kích thước, kiểu dữ liệu, thông tin tổng quan và giá trị trùng lặp.
 2.  **Chuẩn hóa tên cột (Snake Casing):** Chuyển toàn bộ tên cột sang viết thường, thay khoảng trắng bằng dấu gạch dưới (`_`), đổi tên cột chi tiêu thành `purchase_amount`.
@@ -69,4 +69,5 @@ Thiết kế một dashboard với các thành phần:
 
 ## Tác giả
 Dự án mô phỏng quy trình xử lý và phân tích dữ liệu Shopping Trends And Customer Behaviour, bao gồm Data Cleaning, SQL Modeling và trực quan hóa qua Power BI.
+
 📫 Liên hệ: *nguyenhaintnh304@gmail.com*
