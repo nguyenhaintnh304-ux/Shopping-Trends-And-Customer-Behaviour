@@ -38,10 +38,16 @@ Trong bước này, tiến hành xử lý dữ liệu thô trong Jupyter Noteboo
 
 ### Bước 2: SQL - Phân tích dữ liệu chuyên sâu
 Sử dụng các truy vấn SQL nâng cao để giải quyết 10 câu hỏi cốt lõi của doanh nghiệp:
-*   *Doanh thu theo giới tính:* Phân tích tỷ lệ chi tiêu giữa Nam và Nữ.
-*   *Phân tích hành vi giảm giá:* Lọc các khách hàng áp dụng mã giảm giá nhưng vẫn chi tiêu cao hơn mức trung bình bằng **Subquery**.
-*   *Top 3 sản phẩm bán chạy nhất mỗi danh mục:* Sử dụng hàm cửa sổ **`ROW_NUMBER() OVER (PARTITION BY category ORDER BY ... DESC)`** để xếp hạng chính xác.
-*   *Đánh giá chương trình thành viên:* Sử dụng **CTE** kết hợp `CASE WHEN` phân khúc khách hàng theo độ trung thành và so sánh hiệu quả chi tiêu giữa nhóm có và không đăng ký thành viên.
+* 1. Tổng doanh thu tạo ra bởi khách hàng Nam so với Nữ
+* 2. Khách hàng áp dụng giảm giá nhưng vẫn chi tiêu trên mức trung bình
+* 3. Top 5 sản phẩm có điểm đánh giá trung bình cao nhất
+* 4. So sánh chi tiêu trung bình giữa giao hàng Standard và Express
+* 5. Khách hàng đăng ký thành viên có chi tiêu nhiều hơn không
+* 6. Top 5 sản phẩm có tỷ lệ áp dụng giảm giá cao nhất
+* 7. Phân khúc khách hàng: New / Returning / Loyal theo số đơn hàng cũ
+* 8. Top 3 sản phẩm bán chạy nhất trong mỗi danh mục
+* 9. Mối liên hệ giữa khách mua lặp lại (>5 đơn) và việc đăng ký thành viên
+* 10. Tổng doanh thu đóng góp bởi mỗi nhóm tuổi
 
 ### Bước 3: Power BI - Xây dựng Dashboard
 Thiết kế một dashboard với các thành phần:
