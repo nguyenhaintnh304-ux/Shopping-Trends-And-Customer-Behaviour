@@ -10,7 +10,7 @@ Một doanh nghiệp bán lẻ lớn muốn hiểu sâu hơn về hành vi mua s
 ## 🛠️ Công cụ & Công nghệ Sử dụng
 *   **Python (Pandas):** Khám phá, xử lý dữ liệu khuyết, chuẩn hóa và kỹ thuật đặc trưng (Feature Engineering).
 *   **SQL Server:** Thiết lập cơ sở dữ liệu và thực hiện truy vấn phân tích nâng cao (Subqueries, CTE, Window Functions).
-*   **Power BI:** Viết các thước đo DAX, xây dựng mô hình dữ liệu và thiết kế Dashboard.
+*   **Power BI:** Viết các DAX measures, xây dựng mô hình dữ liệu và thiết kế Dashboard.
 
 ---
 
