@@ -37,17 +37,19 @@ Trong bước này, tiến hành xử lý dữ liệu thô trong Jupyter Noteboo
 5.  **Import dữ liệu vào SQL Server:** Xuất file csv, tải về và import vào SQL Server, đổi tên bảng thành `customer`.
 
 ### Bước 2: SQL - Phân tích dữ liệu chuyên sâu
+
 Sử dụng các truy vấn SQL nâng cao để giải quyết 10 câu hỏi cốt lõi của doanh nghiệp:
-* Tổng doanh thu tạo ra bởi khách hàng Nam so với Nữ
-* Khách hàng áp dụng giảm giá nhưng vẫn chi tiêu trên mức trung bình
-* Top 5 sản phẩm có điểm đánh giá trung bình cao nhất
-* So sánh chi tiêu trung bình giữa giao hàng Standard và Express
-* Khách hàng đăng ký thành viên có chi tiêu nhiều hơn không
-* Top 5 sản phẩm có tỷ lệ áp dụng giảm giá cao nhất
-* Phân khúc khách hàng: New / Returning / Loyal theo số đơn hàng cũ
-* Top 3 sản phẩm bán chạy nhất trong mỗi danh mục
-* Mối liên hệ giữa khách mua lặp lại (>5 đơn) và việc đăng ký thành viên
-* Tổng doanh thu đóng góp bởi mỗi nhóm tuổi
+
+1. Tổng doanh thu tạo ra bởi khách hàng Nam so với Nữ
+2. Khách hàng áp dụng giảm giá nhưng vẫn chi tiêu trên mức trung bình
+3. Top 5 sản phẩm có điểm đánh giá trung bình cao nhất
+4. So sánh chi tiêu trung bình giữa giao hàng Standard và Express
+5. Khách hàng đăng ký thành viên có chi tiêu nhiều hơn không
+6. Top 5 sản phẩm có tỷ lệ áp dụng giảm giá cao nhất
+7. Phân khúc khách hàng: New / Returning / Loyal theo số đơn hàng cũ
+8. Top 3 sản phẩm bán chạy nhất trong mỗi danh mục
+9. Mối liên hệ giữa khách mua lặp lại (>5 đơn) và việc đăng ký thành viên
+10. Tổng doanh thu đóng góp bởi mỗi nhóm tuổi
 
 ---
 
