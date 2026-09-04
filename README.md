@@ -53,8 +53,6 @@ Sử dụng các truy vấn SQL nâng cao để giải quyết 10 câu hỏi c�
 
 ---
 
-Lúc trước mình vô tình để danh sách tự động đánh số theo kiểu La Mã, giờ đã sửa lại rồi nhé! Bạn cần chỉnh gì thêm không?
-
 ### Bước 3: Power BI - Xây dựng Dashboard
 Thiết kế một dashboard với các thành phần:
 1.  **Chỉ số KPIs cốt lõi (DAX Measures):** Tính tổng số khách hàng (`COUNT`), chi tiêu trung bình (`AVERAGE`) và điểm đánh giá trung bình.
