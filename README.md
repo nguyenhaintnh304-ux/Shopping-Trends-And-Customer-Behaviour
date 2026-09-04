@@ -15,7 +15,7 @@ Một doanh nghiệp bán lẻ lớn muốn hiểu sâu hơn về hành vi mua s
 ---
 
 ## 📊 Tập dữ liệu 
-Tập dữ liệu thô [`Data/Shopping Trends And Customer Behaviour Dataset.csv`] ghi nhận thông tin giao dịch gần nhất của từng khách hàng đơn lẻ:
+Tập dữ liệu thô [`Data/Shopping Trends And Customer Behaviour Dataset.csv`](./Data) ghi nhận thông tin giao dịch gần nhất của từng khách hàng đơn lẻ:
 *   **Nhân khẩu học:** `customer_id` (Khóa chính), `age` (Tuổi), `gender` (Giới tính).
 *   **Chi tiết giao dịch:** `item_purchased` (Sản phẩm), `category` (Danh mục ngành hàng), `purchase_amount` (Số tiền chi tiêu - USD), `location` (Địa điểm).
 *   **Thuộc tính & Đánh giá:** `size` (Kích cỡ), `color` (Màu sắc), `season` (Mùa), `review_rating` (Điểm đánh giá - có 37 giá trị khuyết).
