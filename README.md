@@ -1,16 +1,19 @@
 # Shopping Trends And Customer Behaviour
 
-Dự án phân tích dữ liệu mô phỏng quy trình làm việc thực tế tại doanh nghiệp. Dự án bao gồm toàn bộ quá trình phân tích: từ làm sạch dữ liệu bằng **Python**, truy vấn nâng cao bằng **SQL Server**, trực quan hóa tương tác trên **Power BI**, tài liệu hóa báo cáo và chuyển đổi thành slide thuyết trình.
+Dự án phân tích dữ liệu mô phỏng quy trình làm việc thực tế tại doanh nghiệp. Dự án bao gồm toàn bộ quá trình phân tích: từ làm sạch dữ liệu bằng Python, truy vấn nâng cao bằng SQL Server, trực quan hóa tương tác trên Power BI, tài liệu hóa báo cáo và chuyển đổi thành slide thuyết trình.
 
 ## 📋 Mục tiêu Kinh doanh 
-Một doanh nghiệp bán lẻ lớn muốn hiểu sâu hơn về hành vi mua sắm của khách hàng nhằm tối ưu hóa doanh số, nâng cao mức độ hài lòng và xây dựng lòng trung thành dài hạn. Ban giám đốc muốn tìm câu trả lời cho câu hỏi: **Làm thế nào để doanh nghiệp khai thác dữ liệu mua sắm của khách hàng để nhận diện xu hướng, cải thiện mức độ tương tác và tối ưu hóa chiến lược tiếp thị & sản phẩm?**
+Một doanh nghiệp bán lẻ lớn muốn hiểu sâu hơn về hành vi mua sắm của khách hàng nhằm tối ưu hóa doanh số, nâng cao mức độ hài lòng và xây dựng lòng trung thành dài hạn. Ban giám đốc muốn tìm câu trả lời cho câu hỏi: Làm thế nào để doanh nghiệp khai thác dữ liệu mua sắm của khách hàng để nhận diện xu hướng, cải thiện mức độ tương tác và tối ưu hóa chiến lược tiếp thị & sản phẩm?
 
 ---
 
-## 🛠️ Công cụ & Công nghệ Sử dụng
-*   **Python (Pandas):** Khám phá, xử lý dữ liệu khuyết, chuẩn hóa và kỹ thuật đặc trưng (Feature Engineering).
-*   **SQL Server:** Thiết lập cơ sở dữ liệu và thực hiện truy vấn phân tích nâng cao (Subqueries, CTE, Window Functions).
-*   **Power BI:** Viết các DAX measures, xây dựng mô hình dữ liệu và thiết kế Dashboard.
+## 🛠️ Công cụ 
+
+**Python (Pandas):** Khám phá, xử lý dữ liệu khuyết, chuẩn hóa và kỹ thuật đặc trưng (Feature Engineering).
+
+**SQL Server:** Thiết lập cơ sở dữ liệu và thực hiện truy vấn phân tích nâng cao (Subqueries, CTE, Window Functions).
+
+**Power BI:** Viết các DAX measures, xây dựng mô hình dữ liệu và thiết kế Dashboard.
 
 ---
 
@@ -28,17 +31,23 @@ Tập dữ liệu thô [`Data/Shopping Trends And Customer Behaviour Dataset.csv
 
 ### Bước 1: Python - Làm sạch & Tiền xử lý dữ liệu 
 Trong bước này, tiến hành xử lý dữ liệu thô trong Jupyter Notebook trước khi nạp vào hệ thống SQL:
-1.  **Kiểm tra tổng quan dữ liệu:** Đọc dữ liệu, kiểm tra kích thước, kiểu dữ liệu, thông tin tổng quan và giá trị trùng lặp.
-2.  **Chuẩn hóa tên cột (Snake Casing):** Chuyển toàn bộ tên cột sang viết thường, thay khoảng trắng bằng dấu gạch dưới (`_`), đổi tên cột chi tiêu thành `purchase_amount`.
-3.  **Kỹ thuật đặc trưng:**
-    *   Tạo cột nhóm tuổi `age_group` phân chia khách hàng thành 4 nhóm bằng nhau (`young adult`, `adult`, `middle-aged`, `senior`) bằng hàm `pd.qcut`.
-    *   Ánh xạ tần suất mua hàng dạng văn bản thành số ngày cụ thể `purchase_frequency_days` bằng hàm `map`.
-4.  **Loại bỏ dữ liệu trùng lặp:** Loại bỏ cột `promo_code_used` vì chứa thông tin giống hoàn toàn 100% với cột `discount_applied`.
-5.  **Import dữ liệu vào SQL Server:** Xuất file csv, tải về và import vào SQL Server, đổi tên bảng thành `customer`.
+
+**Kiểm tra tổng quan dữ liệu:** Đọc dữ liệu, kiểm tra kích thước, kiểu dữ liệu, thông tin tổng quan và giá trị trùng lặp.
+
+**Chuẩn hóa tên cột (Snake Casing):** Chuyển toàn bộ tên cột sang viết thường, thay khoảng trắng bằng dấu gạch dưới (`_`), đổi tên cột chi tiêu thành `purchase_amount`.
+
+**Kỹ thuật đặc trưng:**
+
+* Tạo cột nhóm tuổi `age_group` phân chia khách hàng thành 4 nhóm bằng nhau (`young adult`, `adult`, `middle-aged`, `senior`) bằng hàm `pd.qcut`.
+* Ánh xạ tần suất mua hàng dạng văn bản thành số ngày cụ thể `purchase_frequency_days` bằng hàm `map`.
+
+**Loại bỏ dữ liệu trùng lặp:** Loại bỏ cột `promo_code_used` vì chứa thông tin giống hoàn toàn 100% với cột `discount_applied`.
+
+**Import dữ liệu vào SQL Server:** Xuất file csv, tải về và import vào SQL Server, đổi tên bảng thành `customer`.
 
 ### Bước 2: SQL - Phân tích dữ liệu chuyên sâu
 
-Sử dụng các truy vấn SQL nâng cao để giải quyết 10 câu hỏi cốt lõi của doanh nghiệp:
+Sử dụng các truy vấn SQL nâng cao để giải quyết 10 câu hỏi quan trọng của doanh nghiệp:
 
 1. Tổng doanh thu tạo ra bởi khách hàng Nam so với Nữ
 2. Khách hàng áp dụng giảm giá nhưng vẫn chi tiêu trên mức trung bình
@@ -54,26 +63,41 @@ Sử dụng các truy vấn SQL nâng cao để giải quyết 10 câu hỏi c�
 ---
 
 ### Bước 3: Power BI - Xây dựng Dashboard
+
+<p align="center">
+  <img src="Images/dashboard.png" width="85%" alt="Shopping Trends And Customer Behaviour">
+</p>
+
 Thiết kế một dashboard với các thành phần:
-1.  **Chỉ số KPIs cốt lõi (DAX Measures):** Tính tổng số khách hàng (`COUNT`), chi tiêu trung bình (`AVERAGE`) và điểm đánh giá trung bình.
-2.  **Trực quan hóa dữ liệu:**
-    *   **Donut Chart:** Tỷ lệ khách hàng đăng ký thành viên.
-    *   **Clustered Column Charts:** So sánh doanh thu và sản lượng bán ra theo danh mục sản phẩm.
-    *   **Clustered Bar Charts:** Thể hiện doanh thu và sản lượng theo nhóm tuổi.
-3.  **Bộ lọc tương tác (Button Slicers):** Thiết lập các nút bấm lọc nhanh theo giới tính, trạng thái thành viên, danh mục và hình thức giao hàng để người dùng dễ dàng khám phá dữ liệu.
+
+**Chỉ số KPIs (DAX Measures):** Tính tổng số khách hàng (`COUNT`), chi tiêu trung bình (`AVERAGE`) và điểm đánh giá trung bình.
+
+**Trực quan hóa dữ liệu:**
+
+*   **Donut Chart:** Tỷ lệ khách hàng đăng ký thành viên.
+*   **Clustered Column Charts:** So sánh doanh thu và sản lượng bán ra theo danh mục sản phẩm.
+*   **Clustered Bar Charts:** Thể hiện doanh thu và sản lượng theo nhóm tuổi.
+
+**Bộ lọc (Button Slicers):** Thiết lập các nút bấm lọc nhanh theo giới tính, trạng thái thành viên, danh mục và hình thức giao hàng để người dùng dễ dàng khám phá dữ liệu.
 
 ### Bước 4 & 5: Báo cáo & Slide Thuyết trình (Presentation)
-*   **Báo cáo kỹ thuật:** Biên soạn tài liệu chi tiết mô tả quy trình kỹ thuật và hình ảnh minh họa cho các phần.
-*   **Slide Thuyết trình:** Xây dựng Slide bài thuyết trình tổng hợp toàn bộ quy trình và kết quả phân tích.
+
+**Báo cáo kỹ thuật:** Biên soạn tài liệu chi tiết mô tả quy trình kỹ thuật và hình ảnh minh họa cho các phần.
+
+**Slide Thuyết trình:** Xây dựng Slide bài thuyết trình tổng hợp toàn bộ quy trình và kết quả phân tích.
 
 ---
 
 ## 📈 Kết quả Phân tích & Đề xuất Kinh doanh
-*   Nâng cấp chương trình thành viên và khách hàng thân thiết: đẩy mạnh ưu đãi cho khách mua lại nhiều lần và cải tiến gói thành viên để thu hút nhóm 2.500 khách mua trên 5 lần nhưng chưa đăng ký.
-*   Tiếp thị mục tiêu theo lứa tuổi và giới tính: Dồn ngân sách tiếp thị vào nhóm trẻ tuổi, đây phân khúc mang lại doanh thu cao nhất, đồng thời cá nhân hóa chiến dịch cho khách hàng nam và nữ.
-*   Ưu tiên và tối ưu dịch vụ giao hàng nhanh (Express Shipping): Mở rộng và cải thiện trải nghiệm giao hỏa tốc để thúc đẩy doanh số từ nhóm khách hàng có mức chi tiêu trung bình cao.
-*   Quảng bá và tối ưu giá sản phẩm hàng đầu: Làm nổi các sản phẩm bán chạy và được đánh giá cao, cân nhắc áp dụng mức giá cao hơn.
-*   Kiểm soát chính sách chiết khấu và giảm giá: Rà soát tỷ lệ khuyến mãi để giảm sự phụ thuộc giá, bảo vệ biên lợi nhuận và tránh làm giảm giá trị sản phẩm trong mắt người tiêu dùng.
+Nâng cấp chương trình thành viên và khách hàng thân thiết: đẩy mạnh ưu đãi cho khách mua lại nhiều lần và cải tiến gói thành viên để thu hút nhóm 2.500 khách mua trên 5 lần nhưng chưa đăng ký.
+
+Tiếp thị mục tiêu theo lứa tuổi và giới tính: Dồn ngân sách tiếp thị vào nhóm trẻ tuổi, đây phân khúc mang lại doanh thu cao nhất, đồng thời cá nhân hóa chiến dịch cho khách hàng nam và nữ.
+
+Ưu tiên và tối ưu dịch vụ giao hàng nhanh (Express Shipping): Mở rộng và cải thiện trải nghiệm giao hỏa tốc để thúc đẩy doanh số từ nhóm khách hàng có mức chi tiêu trung bình cao.
+
+Quảng bá và tối ưu giá sản phẩm hàng đầu: Làm nổi các sản phẩm bán chạy và được đánh giá cao, cân nhắc áp dụng mức giá cao hơn.
+
+Kiểm soát chính sách chiết khấu và giảm giá: Rà soát tỷ lệ khuyến mãi để giảm sự phụ thuộc giá, bảo vệ biên lợi nhuận và tránh làm giảm giá trị sản phẩm trong mắt người tiêu dùng.
 
 ---
 
