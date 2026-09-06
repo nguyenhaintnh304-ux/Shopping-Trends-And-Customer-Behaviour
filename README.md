@@ -34,7 +34,7 @@ Trong bước này, tiến hành xử lý dữ liệu thô trong Jupyter Noteboo
 
 **Kiểm tra tổng quan dữ liệu:** Đọc dữ liệu, kiểm tra kích thước, kiểu dữ liệu, thông tin tổng quan và giá trị trùng lặp.
 
-**Chuẩn hóa tên cột (Snake Casing):** Chuyển toàn bộ tên cột sang viết thường, thay khoảng trắng bằng dấu gạch dưới (`_`), đổi tên cột chi tiêu thành `purchase_amount`.
+**Chuẩn hóa tên cột:** Chuyển toàn bộ tên cột sang viết thường, thay khoảng trắng bằng dấu gạch dưới (`_`), đổi tên cột chi tiêu thành `purchase_amount`.
 
 **Kỹ thuật đặc trưng:**
 
