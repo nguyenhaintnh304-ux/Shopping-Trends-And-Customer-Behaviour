@@ -2,7 +2,7 @@
 
 Dự án phân tích dữ liệu mô phỏng quy trình làm việc thực tế tại doanh nghiệp. Dự án bao gồm toàn bộ quá trình phân tích: từ làm sạch dữ liệu bằng Python, truy vấn nâng cao bằng SQL Server, trực quan hóa tương tác trên Power BI, tài liệu hóa báo cáo và chuyển đổi thành slide thuyết trình.
 
-## 📋 Mục tiêu Kinh doanh 
+## 📋 Mục tiêu 
 Một doanh nghiệp bán lẻ lớn muốn hiểu sâu hơn về hành vi mua sắm của khách hàng nhằm tối ưu hóa doanh số, nâng cao mức độ hài lòng và xây dựng lòng trung thành dài hạn. Ban giám đốc muốn tìm câu trả lời cho câu hỏi: Làm thế nào để doanh nghiệp khai thác dữ liệu mua sắm của khách hàng để nhận diện xu hướng, cải thiện mức độ tương tác và tối ưu hóa chiến lược tiếp thị & sản phẩm?
 
 ---
